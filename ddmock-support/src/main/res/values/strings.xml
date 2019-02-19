@@ -1,0 +1,85 @@
+<resources>
+    <string name="mock_app_name">DD Mock</string>
+    <string name="mock_entry_response_time">Response time (ms)</string>
+    <string name="mock_entry_status_code">HTTP Status code</string>
+    <string name="mock_entry_select_file">Select mock file</string>
+    <string name="mock_entry_save">Save</string>
+    <string name="mock_error">Something went wrong. Please try again later.</string>
+
+    <!-- HTTP codes -->
+    <string-array name="http_code">
+        <item>100 Continue</item>
+        <item>101 Switching Protocols</item>
+        <item>102 Processing (WebDAV)</item>
+
+        <item>200 OK</item>
+        <item>201 Created</item>
+        <item>202 Accepted</item>
+        <item>203 Non-Authoritative Information</item>
+        <item>204 No Content</item>
+        <item>205 Reset Content</item>
+        <item>206 Partial Content</item>
+        <item>207 Multi-Status (WebDAV)</item>
+        <item>208 Already Reported (WebDAV)</item>
+        <item>226 IM Used</item>
+
+        <item>300 Multiple Choices</item>
+        <item>301 Moved Permanently</item>
+        <item>302 Found</item>
+        <item>303 See Other</item>
+        <item>304 Not Modified</item>
+        <item>305 Use Proxy</item>
+        <item>306 (Unused)</item>
+        <item>307 Temporary Redirect</item>
+        <item>308 Permanent Redirect (experimental)</item>
+
+        <item>400 Bad Request</item>
+        <item>401 Unauthorized</item>
+        <item>402 Payment Required</item>
+        <item>403 Forbidden</item>
+        <item>404 Not Found</item>
+        <item>405 Method Not Allowed</item>
+        <item>406 Not Acceptable</item>
+        <item>407 Proxy Authentication Required</item>
+        <item>408 Request Timeout</item>
+        <item>409 Conflict</item>
+        <item>410 Gone</item>
+        <item>411 Length Required</item>
+        <item>412 Precondition Failed</item>
+        <item>413 Request Entity Too Large</item>
+        <item>414 Request-URI Too Long</item>
+        <item>415 Unsupported Media Type</item>
+        <item>416 Requested Range Not Satisfiable</item>
+        <item>417 Expectation Failed</item>
+        <item>418 I\'m a teapot</item>
+        <item>420 Enhance Your Calm (Twitter)</item>
+        <item>422 Unprocessable Entity (WebDAV)</item>
+        <item>423 Locked (WebDAV)</item>
+        <item>424 Failed Dependency (WebDAV)</item>
+        <item>425 Reserved for WebDAV</item>
+        <item>426 Upgrade Required</item>
+        <item>428 Precondition Required</item>
+        <item>429 Too Many Requests</item>
+        <item>431 Request Header Fields Too Large</item>
+        <item>444 No Response (Nginx)</item>
+        <item>449 Retry With (Microsoft)</item>
+        <item>450 Blocked by Windows Parental Controls (Microsoft)</item>
+        <item>451 Unavailable For Legal Reasons</item>
+        <item>499 Client Closed Request (Nginx)</item>
+
+        <item>500 Internal Server Error</item>
+        <item>501 Not Implemented</item>
+        <item>502 Bad Gateway</item>
+        <item>503 Service Unavailable</item>
+        <item>504 Gateway Timeout</item>
+        <item>505 HTTP Version Not Supported</item>
+        <item>506 Variant Also Negotiates (Experimental)</item>
+        <item>507 Insufficient Storage (WebDAV)</item>
+        <item>508 Loop Detected (WebDAV)</item>
+        <item>509 Bandwidth Limit Exceeded (Apache)</item>
+        <item>510 Not Extended</item>
+        <item>511 Network Authentication Required</item>
+        <item>598 Network read timeout error</item>
+        <item>599 Network connect timeout error</item>
+    </string-array>
+</resources>

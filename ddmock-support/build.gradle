@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.DeloitteDigitalAPAC.ddmock'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation lib.supportAppcompatV7
+    implementation lib.supportConstraintlayout
+    implementation lib.supportRecyclerviewV7
+    implementation lib.supportDesign
+    implementation lib.kotlinxCoroutinesCore
+    implementation lib.kotlinxCoroutinesAndroid
+    implementation lib.okhttpLoggingInterceptor
+    implementation lib.okhttp
+}

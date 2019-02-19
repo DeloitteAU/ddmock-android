@@ -1,0 +1,40 @@
+[
+  {
+    "name": "master",
+    "commit": {
+      "sha": "6dcb09b5b57875f334f61aebed695e2e4193db5e",
+      "url": "https://api.github.com/repos/nf1993/ddmock/commits/c5b97d5ae6c19d5c5df71a34c7fbeeda2479ccbc"
+    },
+    "protected": true,
+    "protection": {
+      "enabled": true,
+      "required_status_checks": {
+        "enforcement_level": "non_admins",
+        "contexts": [
+          "ci-test",
+          "linter"
+        ]
+      }
+    },
+    "protection_url": "https://api.github.com/repos/nf1993/ddmock/branches/master/protection"
+  },
+  {
+    "name": "develop",
+    "commit": {
+      "sha": "6dcb09b5b57875f334f61aebed695e2e4193nnff",
+      "url": "https://api.github.com/repos/nf1993/ddmock/commits/c5b97d5ae6c19d5c5df71a34c7fbeeda2479nnff"
+    },
+    "protected": true,
+    "protection": {
+      "enabled": true,
+      "required_status_checks": {
+        "enforcement_level": "non_admins",
+        "contexts": [
+          "ci-test",
+          "linter"
+        ]
+      }
+    },
+    "protection_url": "https://api.github.com/repos/nf1993/ddmock/branches/master/protection"
+  }
+]
