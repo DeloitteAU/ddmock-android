@@ -31,6 +31,7 @@ class MockInterceptor : Interceptor {
                 .code(mockEntry.statusCode)
                 .protocol(Protocol.HTTP_1_1)
                 .message("MOCK")
+                .header("Content-Type", if (mockEntry.mediaType != null) mockEntry.mediaType.toString() else CONTENT_TYPE_APPLICATION_JSON)
                 .request(request)
                 .body(ResponseBody.create(mockEntry.mediaType, buffer.size(), buffer))
                 .build()

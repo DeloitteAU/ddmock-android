@@ -3,7 +3,7 @@ package com.dd
 import okhttp3.MediaType
 import java.net.HttpURLConnection
 
-private const val CONTENT_TYPE_APPLICATION_JSON = "application/json"
+internal const val CONTENT_TYPE_APPLICATION_JSON = "application/json; charset=utf-8"
 private const val DEFAULT_MOCK_RESPONSE_DELAY_MS = 400L
 
 class MockEntry(
