@@ -75,19 +75,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusCodeLayout" />
 
-    <RadioGroup
-        android:id="@+id/files"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="@dimen/default_padding"
         android:layout_marginEnd="@dimen/default_padding"
         android:layout_marginBottom="@dimen/default_padding"
-        android:text="@string/mock_entry_select_file"
         app:layout_constraintBottom_toTopOf="@+id/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectFile" />
+        app:layout_constraintTop_toBottomOf="@+id/selectFile">
+
+        <RadioGroup
+            android:id="@+id/files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_entry_select_file" />
+
+    </ScrollView>
 
     <Button
         android:id="@+id/save"
