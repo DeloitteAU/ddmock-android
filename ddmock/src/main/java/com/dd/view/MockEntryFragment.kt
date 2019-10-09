@@ -20,6 +20,8 @@ import kotlinx.android.synthetic.main.fragment_mock_entry.*
 class MockEntryFragment : Fragment(), TextWatcher {
     private var presenter: MockPresenter? = null
 
+    private var originalStatusCode = ""
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_mock_entry, container, false)
     }
