@@ -67,6 +67,11 @@ class MockEntryFragment : Fragment(), TextWatcher {
                 files.check(mockEntry.selectedFile)
             }
 
+            statusCode.setOnFocusChangeListener { _, hasFocus ->
+                if(hasFocus)
+                    statusCode.setText("")
+            }
+
             // Save button listener
             save.setOnClickListener {
                 hideSoftKeyboard()
