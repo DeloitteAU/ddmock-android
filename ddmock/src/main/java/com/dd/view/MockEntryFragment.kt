@@ -20,6 +20,8 @@ import kotlinx.android.synthetic.main.fragment_mock_entry.*
 class MockEntryFragment : Fragment(), TextWatcher {
     private var presenter: MockPresenter? = null
 
+    private var originalStatusCode = ""
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_mock_entry, container, false)
     }
@@ -65,6 +67,16 @@ class MockEntryFragment : Fragment(), TextWatcher {
 
                 // Set currently selected mock file
                 files.check(mockEntry.selectedFile)
+            }
+
+            statusCode.setOnFocusChangeListener { _, hasFocus ->
+                if(hasFocus) {
+                    originalStatusCode = statusCode.text.toString()
+                    statusCode.setText("")
+                }
+                else if(originalStatusCode.isNotEmpty() && statusCode.text.toString().isEmpty()) {
+                    statusCode.setText(originalStatusCode)
+                }
             }
 
             // Save button listener
