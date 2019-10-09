@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.DeloitteDigitalAPAC.ddmock'
+group = 'com.github.DeloitteDigitalAPAC.ddmock-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 

@@ -25,15 +25,15 @@ allprojects {
 If the project is using AndroidX:
 
 ```groovy
-debugImplementation 'com.github.DeloitteDigitalAPAC.ddmock:ddmock:[version]'
-releaseImplementation 'com.github.DeloitteDigitalAPAC.ddmock:ddmock-no-op:[version]'
+debugImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock:[version]'
+releaseImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock-no-op:[version]'
 ```
 
 If the project is using Support libraries:
 
 ```groovy
-debugImplementation 'com.github.DeloitteDigitalAPAC.ddmock:ddmock-support:[version]'
-releaseImplementation 'com.github.DeloitteDigitalAPAC.ddmock:ddmock-no-op-support:[version]'
+debugImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock-support:[version]'
+releaseImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock-no-op-support:[version]'
 ```
 
 3. In your `Application` class:
