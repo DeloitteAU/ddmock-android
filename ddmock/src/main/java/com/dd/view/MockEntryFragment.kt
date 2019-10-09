@@ -68,8 +68,13 @@ class MockEntryFragment : Fragment(), TextWatcher {
             }
 
             statusCode.setOnFocusChangeListener { _, hasFocus ->
-                if(hasFocus)
+                if(hasFocus) {
+                    originalStatusCode = statusCode.text.toString()
                     statusCode.setText("")
+                }
+                else if(originalStatusCode.isNotEmpty() && statusCode.text.toString().isEmpty()) {
+                    statusCode.setText(originalStatusCode)
+                }
             }
 
             // Save button listener
