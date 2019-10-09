@@ -12,6 +12,7 @@ class MockAdapter(private val callback: Callback) : RecyclerView.Adapter<MockAda
 
     var items = ArrayList<String>()
         set(value) {
+            items.sort()
             items.clear()
             items.addAll(value)
             notifyDataSetChanged()
