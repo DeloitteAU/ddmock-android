@@ -8,7 +8,7 @@ App must be using OkHttp for networking
 
 ## Getting started
 
-[![](https://jitpack.io/v/DeloitteDigitalAPAC/ddmock.svg)](https://jitpack.io/#DeloitteDigitalAPAC/ddmock)
+[![](https://jitpack.io/v/DeloitteDigitalAPAC/ddmock-android.svg)](https://jitpack.io/#DeloitteDigitalAPAC/ddmock-android)
 
 1. In your project `build.gradle` file:
 
