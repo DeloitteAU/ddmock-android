@@ -11,6 +11,10 @@ import com.dd.presenter.MockPresenter
 import kotlinx.android.synthetic.main.activity_mock.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+object Settings {
+    var useRealApi = false
+}
+
 class MockActivity : AppCompatActivity(), MockView, MockAdapter.Callback {
     private var adapter: MockAdapter? = null
     val presenter = MockPresenter()
@@ -23,6 +27,8 @@ class MockActivity : AppCompatActivity(), MockView, MockAdapter.Callback {
         adapter = MockAdapter(this)
         mockList.adapter = adapter
         presenter.onAttach(this)
+
+        useRealApi.setOnCheckedChangeListener { _, isChecked -> Settings.useRealApi = isChecked }
     }
 
     @ExperimentalCoroutinesApi
@@ -42,7 +48,7 @@ class MockActivity : AppCompatActivity(), MockView, MockAdapter.Callback {
     override fun editMockEntry() {
         val tag = MockEntryFragment::class.java.simpleName
         supportFragmentManager.beginTransaction()
-                .replace(R.id.container, com.dd.view.MockEntryFragment(), tag)
+                .replace(R.id.container, MockEntryFragment(), tag)
                 .addToBackStack(tag)
                 .commitAllowingStateLoss()
         container.visibility = View.VISIBLE

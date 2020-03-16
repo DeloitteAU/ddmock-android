@@ -20,6 +20,17 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpUsage" />
 
+    <Switch
+        android:id="@+id/useRealApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/default_padding"
+        android:text="@string/use_real_api"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mockList"
         android:layout_width="match_parent"
@@ -28,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/useRealApi" />
 
     <FrameLayout
         android:id="@+id/container"

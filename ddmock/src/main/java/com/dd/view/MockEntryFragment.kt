@@ -41,10 +41,9 @@ class MockEntryFragment : Fragment(), TextWatcher {
 
                 // Status code setup
                 val currentStatusCode = mockEntry.statusCode.toString()
-                for (index in 0 until httpCodes.size) {
-                    val httpCode = httpCodes[index]
-                    if (httpCode.split(" ")[0] == currentStatusCode) {
-                        statusCode.setText(httpCode, TextView.BufferType.EDITABLE)
+                for (element in httpCodes) {
+                    if (element.split(" ")[0] == currentStatusCode) {
+                        statusCode.setText(element, TextView.BufferType.EDITABLE)
                     }
                 }
                 statusCode.addTextChangedListener(this@MockEntryFragment)

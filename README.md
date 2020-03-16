@@ -29,13 +29,6 @@ debugImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock:[versi
 releaseImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock-no-op:[version]'
 ```
 
-If the project is using Support libraries:
-
-```groovy
-debugImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock-support:[version]'
-releaseImplementation 'com.github.DeloitteDigitalAPAC.ddmock-android:ddmock-no-op-support:[version]'
-```
-
 3. In your `Application` class:
 
 ```java
