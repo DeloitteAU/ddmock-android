@@ -5,6 +5,7 @@
     <string name="mock_entry_select_file">Select mock file</string>
     <string name="mock_entry_save">Save</string>
     <string name="mock_error">Something went wrong. Please try again later.</string>
+    <string name="search_endpoint">Search endpoint</string>
     <string name="use_real_api">Use real APIs</string>
 
     <!-- HTTP codes -->

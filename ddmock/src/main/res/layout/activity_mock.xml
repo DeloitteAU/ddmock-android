@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -20,6 +22,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpUsage" />
 
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/default_padding"
+        android:hint="@string/search_endpoint"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
     <Switch
         android:id="@+id/useRealApi"
         android:layout_width="match_parent"
@@ -29,7 +43,7 @@
         android:text="@string/use_real_api"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/search" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mockList"

@@ -8,6 +8,7 @@ import kotlinx.coroutines.*
 class MockPresenter {
     private var view: MockView? = null
     private var clickedMockEntry: MockEntry? = null
+    private var entries = ArrayList<String>()
 
     fun onAttach(view: MockView) {
         this.view = view
@@ -20,6 +21,8 @@ class MockPresenter {
                 ArrayList(DDMock.getEntries().keys)
             }
             val keys = job.await()
+            entries.clear()
+            entries.addAll(keys)
             view?.showMockEntries(keys)
         }
     }
@@ -43,5 +46,10 @@ class MockPresenter {
 
     fun onDetach() {
         view = null
+    }
+
+    fun filter(searchText: String) {
+        val filtered = entries.filter { it.contains(searchText, ignoreCase = true) }
+        view?.showMockEntries(ArrayList(filtered))
     }
 }
