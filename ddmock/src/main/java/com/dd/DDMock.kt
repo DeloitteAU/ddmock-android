@@ -2,10 +2,12 @@ package com.dd
 
 import android.app.Application
 import android.content.res.AssetManager
+import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.HttpUrl
+import okhttp3.MediaType
 import okio.Buffer
 import java.io.IOException
 import java.util.regex.Pattern
@@ -35,10 +37,11 @@ object DDMock {
             } else {
                 val fullFilePath = "$path/$file"
                 val key = path.replace(MOCK_FILE_DIRECTORY, "")
+                val extension = fullFilePath.split("/", ".").last()
                 if (result.contains(key)) {
                     result[key]?.files?.add(fullFilePath)
                 } else {
-                    result[key] = com.dd.MockEntry(key, arrayListOf(fullFilePath))
+                    result[key] = com.dd.MockEntry(key, arrayListOf(fullFilePath), mediaType2 = getMediaType(extension))
                 }
             }
         }
@@ -61,6 +64,14 @@ object DDMock {
         val path = urlPathBuilder.toString()
         val mockEntry = mockEntries[path]
         return mockEntry ?: getRegexEntry(path)
+    }
+
+    private fun getMediaType(extension: String): MediaType? {
+        when (extension) {
+            "json" -> return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_JSON)
+            "pdf" -> return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_PDF)
+        }
+        return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_JSON)
     }
 
     private fun getRegexEntry(path: String): MockEntry? {
