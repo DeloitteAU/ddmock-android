@@ -2,7 +2,6 @@ package com.dd
 
 import android.app.Application
 import android.content.res.AssetManager
-import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -41,7 +40,7 @@ object DDMock {
                 if (result.contains(key)) {
                     result[key]?.files?.add(fullFilePath)
                 } else {
-                    result[key] = com.dd.MockEntry(key, arrayListOf(fullFilePath), mediaType2 = getMediaType(extension))
+                    result[key] = com.dd.MockEntry(key, arrayListOf(fullFilePath), mediaType = getMediaType(extension))
                 }
             }
         }

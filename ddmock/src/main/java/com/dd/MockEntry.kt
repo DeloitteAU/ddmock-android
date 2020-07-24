@@ -12,11 +12,10 @@ class MockEntry(
         var selectedFile: Int = 0,
         var statusCode: Int = HttpURLConnection.HTTP_OK,
         var responseTime: Long = DEFAULT_MOCK_RESPONSE_DELAY_MS,
-        var mediaType2: MediaType?
+        var mediaType: MediaType?
 ) {
         companion object {
                 const val CONTENT_TYPE_APPLICATION_JSON = "application/json; charset=utf-8"
                 const val CONTENT_TYPE_APPLICATION_PDF = "application/pdf; charset=utf-8"
         }
-    val mediaType = MediaType.parse(CONTENT_TYPE_APPLICATION_JSON)
 }
