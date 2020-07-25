@@ -36,7 +36,7 @@ class MockInterceptor : Interceptor {
             .message("MOCK")
             .header(
                 "Content-Type",
-                if (mockEntry.mediaType != null) mockEntry.mediaType.toString() else CONTENT_TYPE_APPLICATION_JSON
+                if (mockEntry.mediaType != null) mockEntry.mediaType.toString() else MockEntry.CONTENT_TYPE_APPLICATION_JSON
             )
             .request(request)
             .body(ResponseBody.create(mockEntry.mediaType, buffer.size(), buffer))
