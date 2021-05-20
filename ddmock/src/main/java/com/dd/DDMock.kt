@@ -66,11 +66,12 @@ object DDMock {
     }
 
     private fun getMediaType(extension: String): MediaType? {
+        extension.toLowerCase()
         when (extension) {
             "json" -> return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_JSON)
             "pdf" -> return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_PDF)
-            "jpeg", "jpg", "JPG", "JPEG" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_JPEG)
-            "png", "PNG" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_PNG)
+            "jpeg", "jpg" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_JPEG)
+            "png" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_PNG)
             "txt"-> return MediaType.parse(MockEntry.CONTENT_TYPE_PLAIN_TXT)
         }
         return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_JSON)
