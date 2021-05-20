@@ -6,13 +6,6 @@ public class mediaTypeTest {
     private val JPEGCheck = "image.JPEG"
     private val PNGCheck = "image.PNG"
     private val txtCheck = "example.txt"
-
-
-
-
-
-
-
     }
 
 
