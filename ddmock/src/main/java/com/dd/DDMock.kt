@@ -72,7 +72,8 @@ object DDMock {
             "pdf" -> return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_PDF)
             "jpeg", "jpg" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_JPEG)
             "png" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_PNG)
-            "txt"-> return MediaType.parse(MockEntry.CONTENT_TYPE_PLAIN_TXT)
+            "txt" -> return MediaType.parse(MockEntry.CONTENT_TYPE_PLAIN_TXT)
+            "gif" -> return MediaType.parse(MockEntry.CONTENT_TYPE_IMAGE_GIF)
         }
         return MediaType.parse(MockEntry.CONTENT_TYPE_APPLICATION_JSON)
     }
