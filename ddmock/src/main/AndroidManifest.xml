@@ -1,1 +1,28 @@
-<manifest package="com.dd" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dd">
+
+    <application
+        android:allowBackup="false"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".view.MockActivity"
+            android:icon="@mipmap/ic_mock_launcher"
+            android:label="@string/mock_app_name"
+            android:resizeableActivity="false"
+            android:roundIcon="@mipmap/ic_mock_launcher_round"
+            android:screenOrientation="portrait"
+            android:taskAffinity="dd.mock.task"
+            android:theme="@style/DDMockAppTheme"
+            android:exported="true"
+            tools:ignore="UnusedAttribute">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
