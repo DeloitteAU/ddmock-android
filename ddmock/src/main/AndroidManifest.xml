@@ -15,6 +15,7 @@
             android:screenOrientation="portrait"
             android:taskAffinity="dd.mock.task"
             android:theme="@style/DDMockAppTheme"
+            android:exported="true"
             tools:ignore="UnusedAttribute">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />
