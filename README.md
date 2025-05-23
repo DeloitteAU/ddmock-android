@@ -1,3 +1,5 @@
+⚠️ This repository is no longer maintained and has been archived.
+
 # DD Mock
 
 An API mocking library for Android.
